@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 const withLogger = WrappedComponent => {
   class WithLogger extends Component {
     componentWillMount() {
-      console.log(this.props, WrappedComponent.name);
+      console.log(this.props);
+    }
+
+    componentWillReceiveProps(nextProps) {
+      console.log(nextProps);
     }
 
     render() {

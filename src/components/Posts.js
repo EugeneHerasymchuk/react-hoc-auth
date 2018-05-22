@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withLogger from '../hoc/withLogger';
+import withAPI from '../hoc/withAPI';
 
 class Posts extends Component {
   static propTypes = {
@@ -18,4 +19,4 @@ class Posts extends Component {
   }
 }
 
-export default withLogger(Posts);
+export default withAPI(withLogger(Posts));
